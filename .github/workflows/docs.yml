@@ -17,14 +17,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Download phpDocumentator
+    - name: Download phpDocumentor
       uses: wei/wget@v1
       with:
         args: https://phpdoc.org/phpDocumentor.phar
     - name: Make executeable
-      run: chmod +x ./phpDocumentator.phar
+      run: chmod +x ./phpDocumentor.phar
     - name: Generate documentation
-      run: ./phpDocumentator.phar
+      run: ./phpDocumentor.phar
     - name: Deploy documentation
       uses: JamesIves/github-pages-deploy-action@v4
       with:

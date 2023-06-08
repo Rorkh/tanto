@@ -1,0 +1,23 @@
+{
+    "name": "ren/tanto",
+    "description": "Multi-backend bot framework",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ren\\Tanto\\": "src/"
+        },
+        "files": [
+            "src/backend.php",
+            "src/vk_api.php",
+            "src/vkontakte.php",
+            "src/tanto.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rorkh",
+            "email": "78957156+Rorkh@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

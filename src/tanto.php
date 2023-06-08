@@ -25,7 +25,7 @@ class Tanto
             $backend->on_start($this->handlers);
         }
         
-        while (true)
+        while (true) /** @phpstan-ignore-line */
         {
             foreach ($this->backends as $backend)
             {

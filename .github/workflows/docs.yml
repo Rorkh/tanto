@@ -22,7 +22,7 @@ jobs:
       with:
         args: https://phpdoc.org/phpDocumentor.phar
     - name: Make executeable
-      run: chmod +x ./phpDocumentor.phar
+      run: sudo chmod +x ./phpDocumentor.phar
     - name: Generate documentation
       run: ./phpDocumentor.phar
     - name: Deploy documentation

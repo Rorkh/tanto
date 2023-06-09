@@ -1,12 +1,20 @@
 <?php
 
-namespace Ren\Tanto;
+namespace Ren\Tanto\Backend;
+use Ren\Tanto\API as API;
 
-require_once 'backend.php';
-require_once 'api/vk.php';
+require_once __DIR__.'/../backend.php';;
+require_once __DIR__.'/../api/vk.php';;
 
+// TODO: Move somewhere probably
+/**
+ * Vkontakte (vk.com) message context
+*/
 class VkMessageContext
 {
+    /**
+     * API client handle
+    */
     private API\VkApiClient $api;
 
     /**
@@ -16,6 +24,7 @@ class VkMessageContext
 
     // TODO: Object type (Message or smth like this)
     /**
+     * Initializes context with API client handle and raw API response
      * @param array<mixed> $object
     */
     function __construct(API\VkApiClient $api, array $object)
@@ -24,6 +33,9 @@ class VkMessageContext
         $this->object = $object;
     }
 
+    /**
+     * Sends message in chat what message belong
+    */
     function reply(string $text) : void
     {
         $this->api->request("messages.send", [
@@ -33,40 +45,77 @@ class VkMessageContext
     }
 }
 
-class Vkontakte implements Backend
+class Vkontakte implements \Ren\Tanto\Backend
 {
+    /**
+     * Access token
+     * https://dev.vk.com/api/access-token/getting-started
+    */
     private string $token;
+
+    /**
+     * API client handle
+    */
     private API\VkApiClient $api;
+
+    /**
+     * Longpoll client handle
+    */
     private API\VkLongPollClient $lp_client;
 
     /**
+     * Array of handlers
      * @var array<string, Callable>
     */
     private array $handlers;
 
+    /**
+     * Name of backend that used in logging
+    */
     private string $name;
+
+    /**
+     * Timestamp when next poll request should be done
+    */
     private int $next_request = 0;
 
+    /**
+     * Initializes context with access token
+     * https://dev.vk.com/api/access-token/getting-started
+    */
     function __construct(string $token)
     {
         $this->token = $token;
     }
 
+    /**
+     * Backend destructor
+    */
     function __destruct()
     {
         $this->on_shutdown();
     }
 
+    /**
+     * Backend name getter
+    */
     function get_name() : string
     {
         return 'Vkontakte';
     }
 
+    /**
+     * Prints message in console with backend name
+    */
     function log(string $message) : void
     {
         echo "[{$this->get_name()}] $message" . PHP_EOL;
     }
 
+    /**
+     * Function called on backend start
+     * Tests provided token and retrieves longpoll server
+    */
     function on_start($handlers) : void
     {
         $this->handlers = $handlers;
@@ -93,11 +142,18 @@ class Vkontakte implements Backend
             $answer->response['ts']);
     }
 
+    /**
+     * Function called on backend shutdown (error)
+    */
     function on_shutdown() : void
     {
         $this->log("Stopped bot for {$this->name}");
     }
 
+    /**
+     * Backend loop
+     * Polls events from longpoll server and handles it
+    */
     function loop() : void
     {
         if ($this->next_request > time())
@@ -110,7 +166,7 @@ class Vkontakte implements Backend
         {
             if ($event["type"] == "message_new")
             {
-                $this->handlers['message'](new \Ren\Tanto\VkMessageContext($this->api, $event["object"]));
+                $this->handlers['message'](new VkMessageContext($this->api, $event["object"]));
             }
         }
 

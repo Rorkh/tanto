@@ -3,11 +3,11 @@
 namespace Ren\Tanto;
 
 require_once 'backend.php';
-require_once 'vk_api.php';
+require_once 'api/vk.php';
 
 class VkMessageContext
 {
-    private VkApiClient $api;
+    private API\VkApiClient $api;
 
     /**
      * @var array<mixed>
@@ -18,7 +18,7 @@ class VkMessageContext
     /**
      * @param array<mixed> $object
     */
-    function __construct(VkApiClient $api, array $object)
+    function __construct(API\VkApiClient $api, array $object)
     {
         $this->api = $api;
         $this->object = $object;
@@ -36,8 +36,8 @@ class VkMessageContext
 class Vkontakte implements Backend
 {
     private string $token;
-    private VkApiClient $api;
-    private VkLongPollClient $lp_client;
+    private API\VkApiClient $api;
+    private API\VkLongPollClient $lp_client;
 
     /**
      * @var array<string, Callable>
@@ -70,7 +70,7 @@ class Vkontakte implements Backend
     function on_start($handlers) : void
     {
         $this->handlers = $handlers;
-        $this->api = new \Ren\Tanto\VkApiClient($this->token);
+        $this->api = new API\VkApiClient($this->token);
 
         $answer = $this->api->request("groups.getById", ["fields"=>"screen_name"]);
         if (!$answer->is_ok())
@@ -89,7 +89,7 @@ class Vkontakte implements Backend
             exit;
         }
 
-        $this->lp_client = new \Ren\Tanto\VkLongPollClient($answer->response['server'], $answer->response['key'],
+        $this->lp_client = new API\VkLongPollClient($answer->response['server'], $answer->response['key'],
             $answer->response['ts']);
     }
 

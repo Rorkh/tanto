@@ -8,7 +8,7 @@
         },
         "files": [
             "src/backend.php",
-            "src/vk_api.php",
+            "src/api/vk.php",
             "src/vkontakte.php",
             "src/tanto.php"
         ]

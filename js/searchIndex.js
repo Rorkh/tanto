@@ -86,25 +86,25 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Ren-Tanto-VKApiAnswer.html#property_response"
         },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiClient",
-            "name": "VKApiClient",
+            "fqsen": "\\Ren\\Tanto\\VkApiClient",
+            "name": "VkApiClient",
             "summary": "",
-            "url": "classes/Ren-Tanto-VKApiClient.html"
+            "url": "classes/Ren-Tanto-VkApiClient.html"
         },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiClient\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Ren\\Tanto\\VkApiClient\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/Ren-Tanto-VKApiClient.html#method___construct"
+            "url": "classes/Ren-Tanto-VkApiClient.html#method___construct"
         },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiClient\u003A\u003Arequest\u0028\u0029",
+            "fqsen": "\\Ren\\Tanto\\VkApiClient\u003A\u003Arequest\u0028\u0029",
             "name": "request",
             "summary": "",
-            "url": "classes/Ren-Tanto-VKApiClient.html#method_request"
+            "url": "classes/Ren-Tanto-VkApiClient.html#method_request"
         },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiClient\u003A\u003A\u0024token",
+            "fqsen": "\\Ren\\Tanto\\VkApiClient\u003A\u003A\u0024token",
             "name": "token",
             "summary": "",
-            "url": "classes/Ren-Tanto-VKApiClient.html#property_token"
+            "url": "classes/Ren-Tanto-VkApiClient.html#property_token"
         },                {
             "fqsen": "\\Ren\\Tanto\\VkLongPollClient",
             "name": "VkLongPollClient",

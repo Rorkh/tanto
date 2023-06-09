@@ -91,6 +91,7 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/ren.html">Ren</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/ren-tanto.html">Tanto</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/ren-tanto-api.html">API</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -109,14 +110,14 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vk_api.php"><a href="files/src-vk-api.html"><abbr title="src/vk_api.php">vk_api.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/api/vk.php"><a href="files/src-api-vk.html"><abbr title="src/api/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
-        
-    <section class="phpdocumentor-description"></section>
+            <p class="phpdocumentor-summary">Vkontakte (vk.com) API client</p>
+
 
 
 
@@ -132,23 +133,24 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-VkApiClient.html#property_token">$token</a>
+    <a href="classes/Ren-Tanto-API-VkApiClient.html#property_token">$token</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Access token
+https://dev.vk.com/api/access-token/getting-started</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-VkApiClient.html#method___construct">__construct()</a>
+    <a href="classes/Ren-Tanto-API-VkApiClient.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Initializes client with the given token</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-VkApiClient.html#method_request">request()</a>
+    <a href="classes/Ren-Tanto-API-VkApiClient.html#method_request">request()</a>
     <span>
-                                &nbsp;: <a href="classes/Ren-Tanto-VKApiAnswer.html"><abbr title="\Ren\Tanto\VKApiAnswer">VKApiAnswer</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Ren-Tanto-API-VKApiAnswer.html"><abbr title="\Ren\Tanto\API\VKApiAnswer">VKApiAnswer</abbr></a>    </span>
 </dt>
 <dd></dd>
 
@@ -162,7 +164,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Ren-Tanto-VkApiClient.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Ren-Tanto-API-VkApiClient.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -173,26 +175,27 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_token">
         $token
-        <a href="classes/Ren-Tanto-VkApiClient.html#property_token" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-API-VkApiClient.html#property_token" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vk_api.php"><a href="files/src-vk-api.html"><abbr title="src/vk_api.php">vk_api.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/api/vk.php"><a href="files/src-api-vk.html"><abbr title="src/api/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Access token
+https://dev.vk.com/api/access-token/getting-started</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$token</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <section class="phpdocumentor-description"></section>
 
     
@@ -203,7 +206,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Ren-Tanto-VkApiClient.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Ren-Tanto-API-VkApiClient.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -213,22 +216,22 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Ren-Tanto-VkApiClient.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-API-VkApiClient.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vk_api.php"><a href="files/src-vk-api.html"><abbr title="src/vk_api.php">vk_api.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/api/vk.php"><a href="files/src-api-vk.html"><abbr title="src/api/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Initializes client with the given token</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$token</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -257,19 +260,19 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_request">
         request()
-        <a href="classes/Ren-Tanto-VkApiClient.html#method_request" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-API-VkApiClient.html#method_request" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vk_api.php"><a href="files/src-vk-api.html"><abbr title="src/vk_api.php">vk_api.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/api/vk.php"><a href="files/src-api-vk.html"><abbr title="src/api/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">request</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$method</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Ren-Tanto-VKApiAnswer.html"><abbr title="\Ren\Tanto\VKApiAnswer">VKApiAnswer</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">request</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$method</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Ren-Tanto-API-VKApiAnswer.html"><abbr title="\Ren\Tanto\API\VKApiAnswer">VKApiAnswer</abbr></a></span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -294,7 +297,7 @@
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Ren-Tanto-VKApiAnswer.html"><abbr title="\Ren\Tanto\VKApiAnswer">VKApiAnswer</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Ren-Tanto-API-VKApiAnswer.html"><abbr title="\Ren\Tanto\API\VKApiAnswer">VKApiAnswer</abbr></a></span>
             &mdash;
         
     
@@ -377,7 +380,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Ren-Tanto-VkApiClient.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Ren-Tanto-API-VkApiClient.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

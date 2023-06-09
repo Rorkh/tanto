@@ -1,6 +1,81 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\Ren\\Tanto\\API\\VKApiAnswer",
+            "name": "VKApiAnswer",
+            "summary": "Vkontakte\u0020\u0028vk.com\u0029\u0020API\u0020answer",
+            "url": "classes/Ren-Tanto-API-VKApiAnswer.html"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VKApiAnswer\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Initializes\u0020this\u0020answer\u0020with\u0020raw\u0020API\u0020response",
+            "url": "classes/Ren-Tanto-API-VKApiAnswer.html#method___construct"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VKApiAnswer\u003A\u003Ais_ok\u0028\u0029",
+            "name": "is_ok",
+            "summary": "Returns\u0020if\u0020API\u0020request\u0020wasn\u0027t\u0020failed",
+            "url": "classes/Ren-Tanto-API-VKApiAnswer.html#method_is_ok"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VKApiAnswer\u003A\u003A\u0024status",
+            "name": "status",
+            "summary": "If\u0020API\u0020request\u0020failed\u0020with\u0020error",
+            "url": "classes/Ren-Tanto-API-VKApiAnswer.html#property_status"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VKApiAnswer\u003A\u003A\u0024response",
+            "name": "response",
+            "summary": "API\u0020response\u0020as\u0020JSON\u0020array\nhttps\u003A\/\/dev.vk.com\/reference\/json\u002Dschema",
+            "url": "classes/Ren-Tanto-API-VKApiAnswer.html#property_response"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkApiClient",
+            "name": "VkApiClient",
+            "summary": "Vkontakte\u0020\u0028vk.com\u0029\u0020API\u0020client",
+            "url": "classes/Ren-Tanto-API-VkApiClient.html"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkApiClient\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Initializes\u0020client\u0020with\u0020the\u0020given\u0020token",
+            "url": "classes/Ren-Tanto-API-VkApiClient.html#method___construct"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkApiClient\u003A\u003Arequest\u0028\u0029",
+            "name": "request",
+            "summary": "",
+            "url": "classes/Ren-Tanto-API-VkApiClient.html#method_request"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkApiClient\u003A\u003A\u0024token",
+            "name": "token",
+            "summary": "Access\u0020token\nhttps\u003A\/\/dev.vk.com\/api\/access\u002Dtoken\/getting\u002Dstarted",
+            "url": "classes/Ren-Tanto-API-VkApiClient.html#property_token"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkLongPollClient",
+            "name": "VkLongPollClient",
+            "summary": "Vkontakte\u0020\u0028vk.com\u0029\u0020longpoll\u0020client",
+            "url": "classes/Ren-Tanto-API-VkLongPollClient.html"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkLongPollClient\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Initializes\u0020client\u0020with\u0020the\u0020given\u0020server\u0020address,\u0020secret\u0020key\u0020and\u0020ts\nhttps\u003A\/\/dev.vk.com\/api\/bots\u002Dlong\u002Dpoll\/getting\u002Dstarted",
+            "url": "classes/Ren-Tanto-API-VkLongPollClient.html#method___construct"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkLongPollClient\u003A\u003Apoll\u0028\u0029",
+            "name": "poll",
+            "summary": "Polls\u0020events\u0020from\u0020long\u0020poll\u0020server\nhttps\u003A\/\/dev.vk.com\/api\/community\u002Devents\/json\u002Dschema",
+            "url": "classes/Ren-Tanto-API-VkLongPollClient.html#method_poll"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkLongPollClient\u003A\u003A\u0024server",
+            "name": "server",
+            "summary": "Longpoll\u0020server\u0020URL",
+            "url": "classes/Ren-Tanto-API-VkLongPollClient.html#property_server"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkLongPollClient\u003A\u003A\u0024key",
+            "name": "key",
+            "summary": "Secret\u0020session\u0020key",
+            "url": "classes/Ren-Tanto-API-VkLongPollClient.html#property_key"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API\\VkLongPollClient\u003A\u003A\u0024ts",
+            "name": "ts",
+            "summary": "Last\u0020event\u0020number",
+            "url": "classes/Ren-Tanto-API-VkLongPollClient.html#property_ts"
+        },                {
             "fqsen": "\\Ren\\Tanto\\Backend",
             "name": "Backend",
             "summary": "",
@@ -60,81 +135,6 @@ Search.appendIndex(
             "name": "handlers",
             "summary": "",
             "url": "classes/Ren-Tanto-Tanto.html#property_handlers"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiAnswer",
-            "name": "VKApiAnswer",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VKApiAnswer.html"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiAnswer\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VKApiAnswer.html#method___construct"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiAnswer\u003A\u003Ais_ok\u0028\u0029",
-            "name": "is_ok",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VKApiAnswer.html#method_is_ok"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiAnswer\u003A\u003A\u0024status",
-            "name": "status",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VKApiAnswer.html#property_status"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VKApiAnswer\u003A\u003A\u0024response",
-            "name": "response",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VKApiAnswer.html#property_response"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkApiClient",
-            "name": "VkApiClient",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkApiClient.html"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkApiClient\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkApiClient.html#method___construct"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkApiClient\u003A\u003Arequest\u0028\u0029",
-            "name": "request",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkApiClient.html#method_request"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkApiClient\u003A\u003A\u0024token",
-            "name": "token",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkApiClient.html#property_token"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkLongPollClient",
-            "name": "VkLongPollClient",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkLongPollClient.html"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkLongPollClient\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkLongPollClient.html#method___construct"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkLongPollClient\u003A\u003Apoll\u0028\u0029",
-            "name": "poll",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkLongPollClient.html#method_poll"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkLongPollClient\u003A\u003A\u0024server",
-            "name": "server",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkLongPollClient.html#property_server"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkLongPollClient\u003A\u003A\u0024key",
-            "name": "key",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkLongPollClient.html#property_key"
-        },                {
-            "fqsen": "\\Ren\\Tanto\\VkLongPollClient\u003A\u003A\u0024ts",
-            "name": "ts",
-            "summary": "",
-            "url": "classes/Ren-Tanto-VkLongPollClient.html#property_ts"
         },                {
             "fqsen": "\\Ren\\Tanto\\VkMessageContext",
             "name": "VkMessageContext",
@@ -235,6 +235,11 @@ Search.appendIndex(
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
+        },                {
+            "fqsen": "\\Ren\\Tanto\\API",
+            "name": "API",
+            "summary": "",
+            "url": "namespaces/ren-tanto-api.html"
         },                {
             "fqsen": "\\Ren\\Tanto",
             "name": "Tanto",

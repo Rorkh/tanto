@@ -5,9 +5,9 @@ namespace Ren\Tanto;
 class VKApiAnswer
 {
     private bool $status;
-    public $response;
+    public mixed $response;
 
-    public function __construct($response)
+    public function __construct(mixed $response)
     {
         $this->status = !(isset($response["error"]));
         if ($this->status)
@@ -16,13 +16,13 @@ class VKApiAnswer
         }
     }
 
-    public function is_ok()
+    public function is_ok() : bool
     {
         return $this->status == true;
     }
 }
 
-class VKApiClient
+class VkApiClient
 {
     private string $token;
 
@@ -31,7 +31,10 @@ class VKApiClient
         $this->token = $token;
     }
 
-    public function request(string $method, array $params = [])
+    /**
+        * @param array<string, string> $params
+    */
+    public function request(string $method, array $params = []) : VKApiAnswer
     {
         $params["v"] = "5.131";
         $ch = curl_init("https://api.vk.com/method/$method");
@@ -57,7 +60,10 @@ class VkLongPollClient
         $this->ts = $ts;
     }
 
-    public function poll()
+    /**
+        * @return array<object>
+    */
+    public function poll() : array
     {
         $ch = curl_init("{$this->server}?act=a_check&key={$this->key}&ts={$this->ts}&wait=25");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

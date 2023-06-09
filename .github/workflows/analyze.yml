@@ -17,4 +17,4 @@ jobs:
       with:
         path: src/
         # TODO: Increase
-        level: 4
+        level: 6

@@ -4,20 +4,27 @@ namespace Ren\Tanto;
 
 class Tanto
 {
+    /**
+     * @var array<Backend>
+    */
     private array $backends = [];
+
+    /**
+     * @var array<string, Callable>
+    */
     private array $handlers = [];
 
-    public function add_backend($backend)
+    public function add_backend(Backend $backend) : void
     {
         array_push($this->backends, $backend);
     }
-
-    public function on_message($callback)
+    
+    public function on_message(Callable $callback) : void
     {
         $this->handlers["message"] = $callback;
     }
 
-    public function start()
+    public function start() : void
     {
         foreach ($this->backends as $backend)
         {
@@ -34,7 +41,7 @@ class Tanto
         }
     }
 
-    public function stop()
+    public function stop() : void
     {
         foreach ($this->backends as $backend)
         {

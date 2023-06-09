@@ -7,34 +7,45 @@ require_once 'vk_api.php';
 
 class VkMessageContext
 {
-    private $api;
-    public $object;
+    private VkApiClient $api;
 
-    function __construct($api, $object)
+    /**
+     * @var array<mixed>
+    */
+    public array $object;
+
+    // TODO: Object type (Message or smth like this)
+    /**
+     * @param array<mixed> $object
+    */
+    function __construct(VkApiClient $api, array $object)
     {
         $this->api = $api;
         $this->object = $object;
     }
 
-    function reply($message)
+    function reply(string $text) : void
     {
         $this->api->request("messages.send", [
             "user_id"=>$this->object["message"]["from_id"], 
             "random_id"=>rand(0, 1000000),
-            "message"=>$message]);
+            "message"=>$text]);
     }
 }
 
 class Vkontakte implements Backend
 {
     private string $token;
-    private $api;
-    private $lp_client;
+    private VkApiClient $api;
+    private VkLongPollClient $lp_client;
 
-    private $handlers;
+    /**
+     * @var array<string, Callable>
+    */
+    private array $handlers;
 
     private string $name;
-    private $next_request = 0;
+    private int $next_request = 0;
 
     function __construct(string $token)
     {
@@ -46,20 +57,20 @@ class Vkontakte implements Backend
         $this->on_shutdown();
     }
 
-    function get_name()
+    function get_name() : string
     {
         return 'Vkontakte';
     }
 
-    function log(string $message)
+    function log(string $message) : void
     {
         echo "[{$this->get_name()}] $message" . PHP_EOL;
     }
 
-    function on_start($handlers)
+    function on_start($handlers) : void
     {
         $this->handlers = $handlers;
-        $this->api = new \Ren\Tanto\VKApiClient($this->token);
+        $this->api = new \Ren\Tanto\VkApiClient($this->token);
 
         $answer = $this->api->request("groups.getById", ["fields"=>"screen_name"]);
         if (!$answer->is_ok())
@@ -82,12 +93,12 @@ class Vkontakte implements Backend
             $answer->response['ts']);
     }
 
-    function on_shutdown()
+    function on_shutdown() : void
     {
         $this->log("Stopped bot for {$this->name}");
     }
 
-    function loop()
+    function loop() : void
     {
         if ($this->next_request > time())
         {

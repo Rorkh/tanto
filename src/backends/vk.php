@@ -20,9 +20,14 @@ class VkMessageContext
     /**
      * @var array<mixed>
     */
-    public array $object;
+    private array $object;
 
-    // TODO: Object type (Message or smth like this)
+    // TODO: Message class
+    /**
+     * @var array<mixed>
+    */
+    public array $message;
+
     /**
      * Initializes context with API client handle and raw API response
      * @param array<mixed> $object
@@ -31,6 +36,8 @@ class VkMessageContext
     {
         $this->api = $api;
         $this->object = $object;
+
+        $this->message = $this->object["message"];
     }
 
     /**
@@ -39,7 +46,7 @@ class VkMessageContext
     function reply(string $text) : void
     {
         $this->api->request("messages.send", [
-            "user_id"=>$this->object["message"]["from_id"], 
+            "user_id"=>$this->message["from_id"], 
             "random_id"=>rand(0, 1000000),
             "message"=>$text]);
     }
@@ -166,7 +173,8 @@ class Vkontakte implements \Ren\Tanto\Backend
         {
             if ($event["type"] == "message_new")
             {
-                $this->handlers['message'](new VkMessageContext($this->api, $event["object"]));
+                $context = new VkMessageContext($this->api, $event["object"]);
+                $this->handlers['message']($context->message["text"], $context);
             }
         }
 

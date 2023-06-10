@@ -1,2 +1,4 @@
-docs/.cache
+docs
 vendor
+
+composer.lock

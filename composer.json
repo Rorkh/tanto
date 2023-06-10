@@ -2,6 +2,7 @@
     "name": "ren/tanto",
     "description": "Multi-backend bot framework",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Ren\\Tanto\\": "src/"

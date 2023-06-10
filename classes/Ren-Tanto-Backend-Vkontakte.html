@@ -91,6 +91,7 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/ren.html">Ren</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/ren-tanto.html">Tanto</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/ren-tanto-backend.html">Backend</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -112,9 +113,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
@@ -147,95 +148,99 @@
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-Vkontakte.html#property_api">$api</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_api">$api</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: <a href="classes/Ren-Tanto-API-VkApiClient.html"><abbr title="\Ren\Tanto\API\VkApiClient">VkApiClient</abbr></a>            </span>
 </dt>
-<dd></dd>
+<dd>API client handle</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-Vkontakte.html#property_handlers">$handlers</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_handlers">$handlers</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
+<dd>Array of handlers</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-Vkontakte.html#property_lp_client">$lp_client</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_lp_client">$lp_client</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: <a href="classes/Ren-Tanto-API-VkLongPollClient.html"><abbr title="\Ren\Tanto\API\VkLongPollClient">VkLongPollClient</abbr></a>            </span>
 </dt>
-<dd></dd>
+<dd>Longpoll client handle</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-Vkontakte.html#property_name">$name</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_name">$name</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Name of backend that used in logging</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-Vkontakte.html#property_next_request">$next_request</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_next_request">$next_request</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
-<dd></dd>
+<dd>Timestamp when next poll request should be done</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Ren-Tanto-Vkontakte.html#property_token">$token</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_token">$token</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Access token
+https://dev.vk.com/api/access-token/getting-started</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method___construct">__construct()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Initializes context with access token
+https://dev.vk.com/api/access-token/getting-started</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method___destruct">__destruct()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method___destruct">__destruct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Backend destructor</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method_get_name">get_name()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_get_name">get_name()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: string    </span>
 </dt>
-<dd></dd>
+<dd>Backend name getter</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method_log">log()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_log">log()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Prints message in console with backend name</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method_loop">loop()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_loop">loop()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Backend loop
+Polls events from longpoll server and handles it</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method_on_shutdown">on_shutdown()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_on_shutdown">on_shutdown()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Function called on backend shutdown (error)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Ren-Tanto-Vkontakte.html#method_on_start">on_start()</a>
+    <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_on_start">on_start()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Function called on backend start
+Tests provided token and retrieves longpoll server</dd>
 
         </dl>
 
@@ -247,7 +252,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Ren-Tanto-Vkontakte.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Ren-Tanto-Backend-Vkontakte.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -258,26 +263,26 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_api">
         $api
-        <a href="classes/Ren-Tanto-Vkontakte.html#property_api" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_api" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">API client handle</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/Ren-Tanto-API-VkApiClient.html"><abbr title="\Ren\Tanto\API\VkApiClient">VkApiClient</abbr></a></span>
     <span class="phpdocumentor-signature__name">$api</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <section class="phpdocumentor-description"></section>
 
     
@@ -292,28 +297,27 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_handlers">
         $handlers
-        <a href="classes/Ren-Tanto-Vkontakte.html#property_handlers" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_handlers" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">77</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Array of handlers</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$handlers</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -326,26 +330,26 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_lp_client">
         $lp_client
-        <a href="classes/Ren-Tanto-Vkontakte.html#property_lp_client" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_lp_client" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Longpoll client handle</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/Ren-Tanto-API-VkLongPollClient.html"><abbr title="\Ren\Tanto\API\VkLongPollClient">VkLongPollClient</abbr></a></span>
     <span class="phpdocumentor-signature__name">$lp_client</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <section class="phpdocumentor-description"></section>
 
     
@@ -360,26 +364,26 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_name">
         $name
-        <a href="classes/Ren-Tanto-Vkontakte.html#property_name" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_name" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Name of backend that used in logging</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$name</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <section class="phpdocumentor-description"></section>
 
     
@@ -394,26 +398,26 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_next_request">
         $next_request
-        <a href="classes/Ren-Tanto-Vkontakte.html#property_next_request" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_next_request" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Timestamp when next poll request should be done</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$next_request</span>
      = <span class="phpdocumentor-signature__default-value">0</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <section class="phpdocumentor-description"></section>
 
     
@@ -428,26 +432,27 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_token">
         $token
-        <a href="classes/Ren-Tanto-Vkontakte.html#property_token" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#property_token" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Access token
+https://dev.vk.com/api/access-token/getting-started</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$token</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <section class="phpdocumentor-description"></section>
 
     
@@ -458,7 +463,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Ren-Tanto-Vkontakte.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Ren-Tanto-Backend-Vkontakte.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -468,22 +473,23 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">93</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Initializes context with access token
+https://dev.vk.com/api/access-token/getting-started</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$token</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -512,22 +518,22 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___destruct">
         __destruct()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method___destruct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method___destruct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">101</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Backend destructor</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__destruct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -545,27 +551,27 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_get_name">
         get_name()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method_get_name" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_get_name" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">109</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Backend name getter</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">get_name</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">get_name</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
         
     
@@ -578,22 +584,22 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_log">
         log()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method_log" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_log" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Prints message in console with backend name</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">log</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">log</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -609,7 +615,7 @@
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     
@@ -622,27 +628,28 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_loop">
         loop()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method_loop" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_loop" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">90</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Backend loop
+Polls events from longpoll server and handles it</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">loop</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">loop</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     
@@ -655,27 +662,27 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_on_shutdown">
         on_shutdown()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method_on_shutdown" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_on_shutdown" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">155</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Function called on backend shutdown (error)</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">on_shutdown</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">on_shutdown</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     
@@ -688,22 +695,23 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_on_start">
         on_start()
-        <a href="classes/Ren-Tanto-Vkontakte.html#method_on_start" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#method_on_start" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/vkontakte.php"><a href="files/src-vkontakte.html"><abbr title="src/vkontakte.php">vkontakte.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/backends/vk.php"><a href="files/src-backends-vk.html"><abbr title="src/backends/vk.php">vk.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Function called on backend start
+Tests provided token and retrieves longpoll server</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">on_start</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$handlers</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">on_start</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$handlers</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -711,15 +719,14 @@
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     
@@ -802,7 +809,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Ren-Tanto-Vkontakte.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Ren-Tanto-Backend-Vkontakte.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

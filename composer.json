@@ -2,14 +2,15 @@
     "name": "ren/tanto",
     "description": "Multi-backend bot framework",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Ren\\Tanto\\": "src/"
         },
         "files": [
             "src/backend.php",
-            "src/api/vk.php",
-            "src/backends/vk.php",
+            "src/vk_api.php",
+            "src/vkontakte.php",
             "src/tanto.php"
         ]
     },

@@ -126,6 +126,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Ren-Tanto-Backend-VkMessageContext.html#property_object"
         },                {
+            "fqsen": "\\Ren\\Tanto\\Backend\\VkMessageContext\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/Ren-Tanto-Backend-VkMessageContext.html#property_message"
+        },                {
             "fqsen": "\\Ren\\Tanto\\Backend\\Vkontakte",
             "name": "Vkontakte",
             "summary": "",
